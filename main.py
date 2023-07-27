@@ -6,7 +6,7 @@ import roundArray
 
 width = 18
 height = 14
-fadeThreshold = 0.9
+fadeThreshold = 0.8
 
 de = DisplayEmulator.DisplayEmulator(width, height, 20)
 
@@ -17,10 +17,12 @@ frame = [[background] * height] * width
 
 de.pushFrame(frame)
 testBlob = blob.Blob(0, 0, (400, 100), 1)
+testBlob2 = blob.Blob(0, 14, (400, -100), 1)
 
 while True:
     fade = roundArray.RoundArray(width, height)
     fade = testBlob.addFade(fade)
+    fade = testBlob2.addFade(fade)
     for i in range(0, width):
         line = [background] * width
         for j in range(0, height):
@@ -32,4 +34,5 @@ while True:
     #print(fade.getArr())
     #print(frame)
     testBlob.updatePos()
+    testBlob2.updatePos()
     de.pushFrame(frame)

@@ -7,7 +7,7 @@ class RoundArray:
     def set(self, x, y, val):
         indexX = (x % self.sizeX)
         print(indexX)
-        if y>self.sizeY:
+        if y>=self.sizeY:
             return False
         self.grid[indexX][y] = val
         return True
@@ -24,12 +24,15 @@ class RoundArray:
 
     def get(self, x, y):
         indexX = (x % self.sizeX)
-        if y > self.sizeY:
-            return -1.0
+        if y >= self.sizeY:
+            return 0
         return self.grid[indexX][y]
 
     def getArr(self):
         return self.grid
+
+    def getSize(self):
+        return (self.sizeX, self.sizeY)
 
     def getHeight(self):
         return self.sizeY
