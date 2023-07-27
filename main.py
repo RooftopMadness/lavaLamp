@@ -16,7 +16,7 @@ white = (255, 255, 255)
 frame = [[background] * height] * width
 
 de.pushFrame(frame)
-testBlob = blob.Blob(0, 0, (0.5, 0.5), 1)
+testBlob = blob.Blob(0, 0, (400, 100), 1)
 
 while True:
     fade = roundArray.RoundArray(width, height)
@@ -29,7 +29,7 @@ while True:
             else:
                 line[j] = background
         frame[i] = line
-    print(fade.getArr())
-    print(frame)
+    #print(fade.getArr())
+    #print(frame)
     testBlob.updatePos()
     de.pushFrame(frame)

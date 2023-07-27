@@ -32,4 +32,4 @@ class DisplayEmulator:
                 pygame.draw.rect(self.screen, frame[x][y], (x, y, rect_width, rect_height))
                 self.win.blit(pygame.transform.scale(self.screen, self.win.get_rect().size), (0, 0))
         pygame.display.update()
-        pygame.time.delay(100)
+        pygame.time.delay(1)

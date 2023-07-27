@@ -8,8 +8,8 @@ class Blob:
         self.size = size
 
     def updatePos(self):
-        self.posX += self.vel[0]
-        self.posY += self.vel[1]
+        self.posX += self.vel[0]/1000
+        self.posY += self.vel[1]/1000
 
     def addFade(self, fade):
         x = round(self.posX)
